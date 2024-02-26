@@ -70,8 +70,24 @@ except:
 
 try:
     numero=int( input("introduce un numero") )
+    numero=int (numero)
+    division=numero/0
+    
     
 except ValueError:
     
     print("Eso que has puesto no es un numero")
+    
+except ZeroDivisionError:
+    
+    print("no se puede divir entre 0")
+
+    """
+    print formateado
+    """
+x=1.2323
+y=3.23487
+print=(f'la x vale{x} y la y vale {y}')
+   
+    
     
