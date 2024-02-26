@@ -88,6 +88,6 @@ except ZeroDivisionError:
 x=1.2323
 y=3.23487
 print=(f'la x vale{x} y la y vale {y}')
-   
+print('la x vale {x}y la y vale{y}'.format)   
     
     
