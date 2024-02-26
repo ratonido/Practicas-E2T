@@ -1,4 +1,5 @@
 import os
+import random
 def creacion(bas):
     os.makedirs(bas)
     
@@ -8,7 +9,8 @@ def creacion(bas):
         os.makedirs(creacion_carpeta)
         
         for j in range(1,5):
-            archivo = creacion_carpeta + '/' + str(j) +'.txt' 
+            extension=random.choice(['.txt','.doc','.xls','.csv'])
+            archivo = creacion_carpeta + '/' + str(j) + extension 
             with open(archivo, 'w') as fichero:
                 fichero.write('Esto es fichero'+ str(j) )
                 
