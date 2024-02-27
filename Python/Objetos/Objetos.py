@@ -1,8 +1,8 @@
 #Objetos
 
-#Defino con la sentencia class y el nombre, generalmente la primera en mayúscula
+# Defino con la sentencia class y el nombre, generalmente la primera en mayúscula
 class Militar:            
-                # en esta parte puedo definir propiedades pero es mejor hacerlo en el init o iniciador
+                # En esta parte puedo definir propiedades pero es mejor hacerlo en el init o iniciador
     def __init__(self,nombre,apellidos,edad): # Constructor(def __init__).Palabras mágicas self e init.
                                               # Self hace referencia a las variables del propio objeto
         self.nombre= nombre
@@ -10,7 +10,7 @@ class Militar:
         self.edad=edad
         print("se ha creado el militar", self.nombre,apellidos,edad,"en",self.pais)
         
-    def desfila(self):          # creamos un método. es igual que una función pero la diferencia es que el método pertenece a un objeto.
+    def desfila(self):          # Creamos un método. Es igual que una función pero la diferencia es que el método pertenece a un objeto.
         print("Ahora",self.nombre,"está desfilando")
     
     def flexiones(self,cuantas):
@@ -18,7 +18,7 @@ class Militar:
         
 
     @classmethod        # Cuando modificamos cosas de la clase creada, como hacer uso de una clase dentro de una misma clase y crear
-                        #otro objeto con las propiedades que le defina dentro del metodo 
+                        # otro objeto con las propiedades que le defina dentro del metodo 
     def cambia_pais(cls,nuevo): # Con classmethod se usa cls en lugar de self
         cls.pais=nuevo
         
