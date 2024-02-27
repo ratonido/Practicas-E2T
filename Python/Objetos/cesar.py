@@ -35,8 +35,10 @@ def __init__(self,desplazamiento):
     self.desplazamiento = desplazamiento
         
     def cifrado(self,texto):
+        devuelve=""
         for i in texto:
             
+    
             
         
     
