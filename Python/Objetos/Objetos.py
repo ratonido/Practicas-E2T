@@ -4,7 +4,7 @@
 class Militar:    
     pais="España"   #Atributos de clase: nuestro objeto puede tener valores comunes a toda la clase Atributos de instancia. Palabras mágicas self e init.Self hace referencia a
                     # las variables del propio objeto
-    
+
     
     def __init__(self,nombre,apellidos,edad):
         self.nombre= nombre
@@ -19,13 +19,16 @@ class Militar:
         print("Ahora",self.nombre,"está haciendo",cuantas,"flexiones")
         
 
-    @classmethod
-    def cambia_pais(cls,nuevo): # Cuando modificamos cosas de la clase creada
+    @classmethod        # Cuando modificamos cosas de la clase creada
+    def cambia_pais(cls,nuevo): 
         cls.pais=nuevo
         
     def cumple(self):
         self.edad+=1
         print(self.nombre, "ha cumplido",self.edad,'años' )
+        
+    def nacimiento(self):
+        print("El año de nacimiento de",self.nombre,'es',2024-self.edad)
     @staticmethod           #Decorador, cuando no necesita atributos de la clase ni de la instancia
     
     def frase(variable):
@@ -37,4 +40,6 @@ jorge=Militar('Jorge','gomez',20)
 
 jorge.cumple()
 manuel.cumple()
+jorge.nacimiento()
+manuel.nacimiento()
 
