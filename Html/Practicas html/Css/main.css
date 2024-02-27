@@ -4,8 +4,21 @@
     font-weight:900;          
     }   
 p, h1{                      
-    font-size: 30px; 
+    font-size: 18px; 
     }
- .dospix{
-    width: 1500px;
+img{
+    width: 50%;
     } 
+p{
+   font-style: italic; 
+}
+.verde{
+    color: chartreuse;
+}
+ul{
+    list-style: none;
+}
+.li{
+
+    display: inline;
+}
