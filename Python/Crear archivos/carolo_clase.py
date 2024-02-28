@@ -16,17 +16,16 @@ class jugador:
     eleccion=random.choice(decision)
     print(eleccion)
         
-    def gana_pierde(self):
+    def gana_pierde(self):  # se define un método para ver que ocurre dependiendo de la decision que tome el concursante
     
         while self.eleccion == True:          # con un bucle while se analiza los supuestos en los que el concursante 
                                               #cambia de puerta
                 
             if self.seleccion == 'coche':
-                premio=self.seleccion
-                random.choice(self.restante)
-                print(premio,"\nFelicidades has ganado")
+                print(self.seleccion,"\n Decidiste cambiar y tenias el coche,lo siento has perdido")
                 break
-                
+
+                   
             if self.seleccion != 'coche':
                 ultima=random.choice(self.restante)
                 if ultima == 'coche':
@@ -39,12 +38,12 @@ class jugador:
         while self.eleccion == False:  # con otro bucle while se analizan los supuestos en los que no cambia de puerta
                 
             if self.seleccion != 'coche':
-                print(self.seleccion,"\n lo siento has perdido")
+                print(self.seleccion,"\nLo siento has perdido")
                 break
                 
             if self.seleccion == 'coche':
                 premio=self.seleccion
-                random.choice(self.restante)     
+                ultima=random.choice(self.restante)     
                 print(premio,"\nFelicidades has ganado")
                 break 
         
