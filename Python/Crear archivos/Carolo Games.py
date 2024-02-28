@@ -6,35 +6,49 @@
 
 
 import random
-class puerta:
+        
+puerta=['oveja','coche','nada']
+random.shuffle(puerta)
+seleccion=random.choice(puerta)
+print(seleccion)
+puerta.remove(seleccion)
+restante=puerta
+print(restante)
+decision=[True,False]
+eleccion=random.choice(decision)
+print(eleccion)
+def gana_pierde(eleccion):
     
-    def __init__(self,puertas):   
-        premios=['oveja','coche','nada']
-        self.premios=puertas
-        random.shuffle(premios)
-    def eliminar(self):
-        elegir=random.choices([self.premios])
-        print(elegir)
-        if elegir == 'coche':
-            self.premios=['oveja','nada']
-        elif elegir =='nada':
-            self.premios=['coche','oveja']
-        else:
-            self.premios=['coche','nada']
+    while eleccion == True:
         
-            print(self.premios)
-            
-            
+        if seleccion == 'coche':
+            premio=seleccion
+            random.choice(restante)
+            print(premio,"\nFelicidades has ganado")
+            break
         
-            
-         
-   
-       
+        if seleccion != 'coche':
+            ultima=random.choice(restante)
+            if ultima == 'coche':
+                print(ultima,"\n Felicidades has ganado")
+                break
+            else:
+                print(ultima,"\n lo siento has perdido")
+                break
+    while eleccion == False:
         
-puerta1=puerta() 
-puerta1.eliminar('oveja')   
-  
+        if seleccion != 'coche':
+            print(seleccion,"\n lo siento has perdido")
+            
+            break
+        
+        if seleccion == 'coche':
+            premio=seleccion
+            random.choice(restante)     
+            print(premio,"\nFelicidades has ganado")
+            break 
 
+gana_pierde(eleccion)        
 
 
                 
