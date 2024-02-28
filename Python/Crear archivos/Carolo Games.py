@@ -22,7 +22,7 @@ class puerta:
         else:
             self.premios=['coche','nada']
         
-            print(self.puertas)
+            print(self.premios)
             
             
         
@@ -31,9 +31,8 @@ class puerta:
    
        
         
-puerta1=puerta('oveja')
-  
-puerta1.eliminar()   
+puerta1=puerta() 
+puerta1.eliminar('oveja')   
   
 
 
