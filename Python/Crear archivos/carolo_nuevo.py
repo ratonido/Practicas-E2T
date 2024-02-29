@@ -1,10 +1,8 @@
 import random
-
-class puertas:
+class premios: 
+    def __init__(self,rondas):
+        self.rondas=rondas
     
-    
-       
-        
     puerta=['oveja','coche','nada']
     random.shuffle(puerta)
     seleccion=random.choice(puerta)
@@ -15,9 +13,11 @@ class puertas:
     decision=[True,False]  # con un true o false se decide si se cambia o no de puerta y se asigna a una variable
     eleccion=random.choice(decision)
     print(eleccion)
-        
-                
-        
+    def participa(self):
+        while self.rondas > 0:
+            self.rondas-=1
+                            
+    
     def gana_pierde(self):  # se define un método para ver que ocurre dependiendo de la decision que tome el concursante
             
         while self.eleccion == True:          # con un bucle while se analiza los supuestos en los que el concursante 
@@ -33,8 +33,8 @@ class puertas:
                         print(ultima,"\n Felicidades has ganado")
                         break
                             
-            else:
-                self.perdedor=print(ultima,"\n lo siento has perdido")
+                else:
+                    self.perdedor=print(ultima,"\n lo siento has perdido")
                                 
                 break
                             
@@ -54,32 +54,5 @@ class puertas:
                 
    
             
-jugador1=puertas()
-jugador1.gana_pierde()
-
-
-    
-          
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+jugador1=premios(28)
+jugador1.participa()
