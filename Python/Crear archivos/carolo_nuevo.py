@@ -2,7 +2,7 @@ import random
 class premios: 
     def __init__(self,rondas):
         self.rondas=rondas
-    
+    rondas=0
     puerta=['oveja','coche','nada']
     random.shuffle(puerta)
     seleccion=random.choice(puerta)
@@ -16,6 +16,8 @@ class premios:
     def participa(self):
         while self.rondas > 0:
             self.rondas-=1
+            jugador1.gana_pierde
+            
                             
     
     def gana_pierde(self):  # se define un método para ver que ocurre dependiendo de la decision que tome el concursante
