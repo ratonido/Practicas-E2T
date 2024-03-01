@@ -12,11 +12,11 @@ img{
 .tabla{
    font-style: italic;
    text-align: center;
-   font-size: 30px;
-   margin-left: 20px;
-   margin-right: 20px;
-   padding-left: 30px;
-   padding-right: 30px;
+   font-size: 20px;
+   margin-left: 40px;
+   margin-right: 40px;
+   padding-left: 40px;
+   padding-right: 40px;
    background-color:red;
 }
 .texto{

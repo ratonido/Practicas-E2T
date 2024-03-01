@@ -2,9 +2,9 @@ import random
 
 class puertas:
     
-    
-       
-        
+    def __init__(self,rondas):
+        self.rondas=rondas
+   
     puerta=['oveja','coche','nada']
     random.shuffle(puerta)
     seleccion=random.choice(puerta)
@@ -42,7 +42,7 @@ class puertas:
                             
             if self.seleccion != 'coche':
                 self.perdedor=print(self.seleccion,"\nLo siento has perdido")
-                            
+                
                 break
                             
             if self.seleccion == 'coche':
@@ -51,11 +51,22 @@ class puertas:
                 self.ganador=print(premio,"\nFelicidades has ganado")
                             
                 break 
+    
                 
-   
             
-jugador1=puertas()
-jugador1.gana_pierde()
+
+
+rondas=20
+jugador1=puertas(rondas)
+while rondas > 0:
+    rondas-=1
+    jugador1.gana_pierde  
+
+   
+         
+
+   
+    
 
 
     
