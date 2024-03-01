@@ -4,12 +4,12 @@ class puertas:
     
     def __init__(self,rondas):
         self.rondas=rondas
-        self.stats=[0,0,0,0,0]
-
+        self.stats=[0,0,0,0]
+       
     
             
     def gana_pierde(self):  # se define un método para ver que ocurre dependiendo de la decision que tome el concursante
-        while self.rondas >0:
+        while self.rondas >-1:
             self.rondas-=1
             puerta=['oveja','coche','nada']
             random.shuffle(puerta)
@@ -21,11 +21,14 @@ class puertas:
             decision=[True,False]  # con un true o false se decide si se cambia o no de puerta y se asigna a una variable
             eleccion=random.choice(decision)
             print(eleccion)
-            if self.rondas==0:
-                print('El jugador ha perdido',self.stats[0],'cambiando de puerta',)
-                print('El jugador ha perdido',self.stats[2],'sin cambiar de puerta')
-                print('El jugador ha ganado',self.stats[1],'cambiando de puerta')
-                print('El jugador ha ganado',self.stats[3],'sin cambiar de puerta')
+            if self.rondas==-1:
+                print(self.stats)
+                print('El jugador ha perdido',self.stats[0],'veces cambiando de puerta',)
+                print('El jugador ha perdido',self.stats[2],'veces sin cambiar de puerta')
+                print('El jugador ha ganado',self.stats[1],'veces cambiando de puerta')
+                print('El jugador ha ganado',self.stats[3],'veces sin cambiar de puerta')
+                break
+                
 
             while eleccion == True:# con un bucle while se analiza los supuestos en los que el concursante 
                                                                 
@@ -37,8 +40,9 @@ class puertas:
                                 
                 if seleccion != 'coche':
                     self.ganador=ultima=random.choice(restante)
-                    self.stats[1]+=1
+                    
                     if ultima == 'coche':
+                        self.stats[1]+=1
                         print(ultima,"\n Felicidades has ganado")
                             
                         break
@@ -64,14 +68,12 @@ class puertas:
                             
                     break 
         
-            
+    
                           
                 
             
             
 concurso1=puertas(30)
 concurso1.gana_pierde()
-
-# el código no funciona del todo bien en el conteo ya que no me dio tiempo a acbarlo
    
     
