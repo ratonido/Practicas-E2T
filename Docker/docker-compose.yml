@@ -1,0 +1,15 @@
+version: '3.1'
+
+services:
+  app:
+    container_name: 'Ratonido'
+    image: httpd:latest
+    ports:
+      - 8282:80
+
+     
+  app2:
+    container_name: 'Ratonido'
+    image: httpd:latest
+    ports:
+      - 8383:80
