@@ -113,7 +113,7 @@
         
         .lb-nav a {
           outline: none;
-          background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
+          /*background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');*/
         }
         
         .lb-prev, .lb-next {
@@ -234,3 +234,9 @@
             text-decoration: underline;
             
         }  
+        img {
+            overflow-clip-margin: content-box;
+            overflow: clip;
+            overflow-x: 
+             
+        }
