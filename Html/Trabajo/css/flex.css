@@ -2,8 +2,8 @@
     .contenedor{
         background-color:wheat;
         padding: 10px;
-        display: flex;
-        flex-flow: row wrap;
+        display:flex;
+        flex-flow:column;
         justify-content: center;
         align-items: end;
         gap: 10px;
@@ -34,9 +34,9 @@
 
 .item1{
     background-image: url("../img/zamora3.jpg");
-    text-overflow: ellipsis;
+    
     text-shadow: 2px;
-    text-;
+    
     
     
 
@@ -74,8 +74,8 @@
 
 .item7{
     background-image: url("../img/zamora7.jpg");
-    width: 1700px;
-    height:750px;
+    width: 1600px;
+    height: 600px;
 
 
 }
@@ -87,13 +87,13 @@
     background-color:wheat;
     padding: 10px;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row;
     justify-content: center;
-    align-items: end;
+    align-items: center;
     gap: 10px;
     font-family: 'Courier New', Courier, monospace;
-    text-decoration:wavy;
-    font-style: italic;
+    font-weight: bold;
+    font-weight: 900;    
     color:black
 
 }
@@ -104,10 +104,9 @@
     gap: 10px;
     padding: 5px;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
 }
 
 
-
-
+/* A partir de aquí comienza el light box*/
 
