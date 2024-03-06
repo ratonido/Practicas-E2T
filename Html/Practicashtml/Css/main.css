@@ -7,7 +7,7 @@ p, h1{
     font-size: 18px; 
     }
 img{
-    width: 10px;
+    width: 30px;
     } 
 .tabla{
    font-style: italic;
@@ -28,3 +28,39 @@ img{
 
 
 }
+
+form {
+
+    margin: 0 auto;
+    width: 400px;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+  textarea {
+    /* Alinear los campos de texto multilínea con sus etiquetas */
+    vertical-align: top;
+  }
+
+  body {
+    font: 1.3rem sans-serif;
+    padding: 0.5em;
+    margin: 0;
+    background: #222;
+  }
+  
+  form {
+    position: relative;
+    width: 740px;
+    height: 498px;
+    margin: 0 auto;
+    padding: 1em;
+    box-sizing: border-box;
+  }
