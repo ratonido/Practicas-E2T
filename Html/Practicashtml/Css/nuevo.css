@@ -1,0 +1,36 @@
+.item1{
+    background-image: url("../img/zamora3.jpg");
+}
+.item2{
+    background-image: url("../img/zamora2.jpg");
+}
+
+.item3{
+    background-image: url("../img/zamora1.jpg")
+
+}
+
+.item4{
+    background-image: url("../img/semanasanta.jpg");
+
+}
+
+.item5{
+    background-image: url("../img/Zamora4.jpg");
+}   
+.item6{
+    background-image: url("../img/zamora5.jpg")
+}
+
+.item{
+    padding: 10px;
+    
+}
+
+.contenedor{
+    background-color: darkblue;
+    padding: 10px;
+    display: grid;
+    grid-template-columns:[colu1] 1fr [colu2] 1fr [colu3] 1fr [colu4];
+    grid-template-rows: [fila1] 1fr [fila2] 1fr [fila3] ;
+}

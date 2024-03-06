@@ -37,10 +37,12 @@ direccion.red_ip()
 
 net=input("Introduce la dirección de red")
 red=net.split(".")
+oct1=red.bin[1]
+print(oct1)
 mask=input("Introduce la máscara de red")
 mascara=mask.split(".")
 
-def ipsub(r,m):
+
     
     
     

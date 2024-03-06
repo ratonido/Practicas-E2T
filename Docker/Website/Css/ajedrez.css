@@ -1,0 +1,18 @@
+.blancos{
+    background-color: white;
+    height: 90px;
+    width:90px;
+    font:color="white";
+    font-size: 50px;
+    text-align: center;
+}
+
+.negros{
+    background-color: black;
+    height:90px;
+    width:90px;
+    font:color="black";
+    font-size: 50px;
+
+
+}

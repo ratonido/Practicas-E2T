@@ -1,0 +1,98 @@
+@media (min-width: 802px) {   
+    .contenedor{
+        background-color:wheat;
+        padding: 10px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: end;
+        gap: 10px;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: medium;
+        
+        
+    }
+   
+}
+
+.item{
+    padding: 20px;
+    height: 100px;
+    width: 200px;
+    background-position: center;
+    text-align: center;
+    text-decoration:wavy;
+    font-style: italic;
+    color:black
+
+}
+.img{
+    
+    
+}
+
+.item1{
+    background-image: url("../img/zamora3.jpg");
+    
+
+    
+}
+.item2{
+    background-image: url("../img/zamora2.jpg");
+    
+    
+}
+
+.item3{
+    background-image: url("../img/zamora1.jpg")
+    
+
+}
+
+.item4{
+    background-image: url("../img/semanasanta.jpg");
+    
+
+}
+
+.item5{
+    background-image: url("../img/Zamora4.jpg");
+    
+    
+   
+    
+}   
+.item6{
+    background-image: url("../img/zamora5.jpg")
+    
+    
+}
+
+.contenedor{
+    background-color:wheat;
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: end;
+    gap: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration:wavy;
+    font-style: italic;
+    color:black
+
+}
+
+.contenedor2{
+    background-color: wheat;
+    display:flex;
+    gap: 10px;
+    padding: 5px;
+    align-items: center;
+    justify-content: left;
+}
+
+
+
+
+
