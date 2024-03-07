@@ -1,41 +1,46 @@
-@media (min-width: 802px) {   
+@media () {   
     .contenedor{
         background-color:wheat;
+        width:auto;
+        height:400px;
         padding: 10px;
         display:flex;
-        flex-flow:column;
-        justify-content: center;
-        align-items: end;
-        gap: 10px;
+        flex-flow:row;
+        
         font-family: 'Courier New', Courier, monospace;
         font-size: medium;
         
         
     }
-   
+    .contenedor2{
+        background-color: wheat;
+        height: 300px;
+        flex-flow: column;
+        width:auto;
+        padding:10px;
+        display: flex;
+        flex-flow: row;
+        gap:10px;
+    }
 }
 
 .item{
-    padding: 20px;
-    height: 100px;
-    width: 200px;
+    padding: 10px;
+    height:100px;
+    width: 100px;
     background-position: center;
     text-align:center;
-    text-decoration:wavy;
+    
     
     
     
 
 }
-.img{
-    
-    
-}
+
 
 .item1{
-    background-image: url("../img/zamora3.jpg");
+    /*background-image: url("../img/zamora3.jpg");*/
     
-    text-shadow: 2px;
     
     
     
@@ -43,25 +48,25 @@
     
 }
 .item2{
-    background-image: url("../img/zamora2.jpg");
+    /*background-image: url("../img/zamora2.jpg");*/
     
     
 }
 
 .item3{
-    background-image: url("../img/zamora1.jpg")
+   /* background-image: url("../img/zamora1.jpg")*/
     
 
 }
 
 .item4{
-    background-image: url("../img/semanasanta.jpg");
+    /*background-image: url("../img/semanasanta.jpg");*/
     
 
 }
 
 .item5{
-    background-image: url("../img/Zamora4.jpg");
+   /* background-image: url("../img/Zamora4.jpg");*/
     
     
     
@@ -69,44 +74,42 @@
     
 }   
 .item6{
-    background-image: url("../img/zamora5.jpg");
+    /*background-image: url("../img/zamora5.jpg");*/
 }
 
-.item7{
-    background-image: url("../img/zamora7.jpg");
-    width: 1600px;
-    height: 600px;
-
-
-}
     
     
 
 
 .contenedor{
-    background-color:wheat;
+    background-image:url("../img/bandera_zamora.png");
     padding: 10px;
     display: flex;
-    flex-flow: row;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
-    gap: 10px;
+    gap: 150px;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
-    font-weight: 900;    
-    color:black
-
 }
 
 .contenedor2{
     background-color: wheat;
-    display:flex;
-    gap: 10px;
-    padding: 5px;
-    align-items: center;
-    justify-content: center;
+    flex-flow: column;
+    flex-direction: row;
+    display: flex;
+    gap: 25px;
+    
+    
+    
 }
-
+.cont2_item1 {
+    border:none;
+  }
+.p1{
+    text-align: center;
+    background-color: coral;
+    font-family: 'Courier New', Courier, monospace;
+}
 
 /* A partir de aquí comienza el light box*/
 

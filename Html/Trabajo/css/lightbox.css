@@ -36,7 +36,8 @@
         }
         
         .lightbox {
-          position: absolute;
+          background-color: wheat;
+          position: left;
           left: 0;
           width: 100%;
           z-index: 10000;
@@ -224,19 +225,4 @@
           filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
           opacity: 1;
         }
-        
       
-  
-  
-        a:-webkit-any-link {
-            color: -webkit-link;
-            cursor: pointer;
-            text-decoration: underline;
-            
-        }  
-        img {
-            overflow-clip-margin: content-box;
-            overflow: clip;
-            overflow-x: 
-             
-        }
