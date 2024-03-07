@@ -1,29 +1,20 @@
-@media () {   
-    .contenedor{
-        background-color:wheat;
-        width:auto;
-        height:400px;
-        padding: 10px;
-        display:flex;
-        flex-flow:row;
-        
-        font-family: 'Courier New', Courier, monospace;
-        font-size: medium;
-        
-        
-    }
-    .contenedor2{
-        background-color: wheat;
-        height: 300px;
-        flex-flow: column;
-        width:auto;
-        padding:10px;
-        display: flex;
-        flex-flow: row;
-        gap:10px;
-    }
-}
+@media screen and (max-width: 1000px) {   
 
+    header, nav ul {
+        flex-direction: column;
+    }
+
+
+   
+
+.nav ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+}
+        
+        
+}
 .item{
     padding: 10px;
     height:100px;
@@ -38,58 +29,17 @@
 }
 
 
-.item1{
-    /*background-image: url("../img/zamora3.jpg");*/
-    
-    
-    
-    
-
-    
-}
-.item2{
-    /*background-image: url("../img/zamora2.jpg");*/
-    
-    
-}
-
-.item3{
-   /* background-image: url("../img/zamora1.jpg")*/
-    
-
-}
-
-.item4{
-    /*background-image: url("../img/semanasanta.jpg");*/
-    
-
-}
-
-.item5{
-   /* background-image: url("../img/Zamora4.jpg");*/
-    
-    
-    
-   
-    
-}   
-.item6{
-    /*background-image: url("../img/zamora5.jpg");*/
-}
-
-    
-    
-
-
-.contenedor{
+.header{
     background-image:url("../img/bandera_zamora.png");
-    padding: 10px;
     display: flex;
-    justify-content:center;
+    flex-direction: row;
     align-items: center;
-    gap: 150px;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top:0;
+    left:0;
+    
 }
 
 .contenedor2{
@@ -98,18 +48,11 @@
     flex-direction: row;
     display: flex;
     gap: 25px;
-    
-    
-    
 }
-.cont2_item1 {
-    border:none;
-  }
-.p1{
-    text-align: center;
-    background-color: coral;
-    font-family: 'Courier New', Courier, monospace;
+    
+    
+    
+
+.img.logotipo{
+    width: 50px;
 }
-
-/* A partir de aquí comienza el light box*/
-
