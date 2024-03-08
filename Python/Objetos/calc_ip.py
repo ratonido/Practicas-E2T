@@ -28,25 +28,33 @@ direccion.red_ip()
 """
 
    
- 
-    
-    
+net=input("Introduce la dirección de red") 
+#mask=input("introduce la máscara de red")
 
-
-
-
-net=input("Introduce la dirección de red")
-red=net.split(".")
-oct1=red.bin[1]
-print(oct1)
-mask=input("Introduce la máscara de red")
-mascara=mask.split(".")
-
+ip_octetos=net.split(".")
+ip_red=int(ip_octetos)
+print(ip_red)
 
     
-    
+#dirnet=net & mask
+#dirbroad=net|~mask
+#print(dirnet)
+#print(dirbroad)
     
 
-#mask=input("Introduce la máscara")
+#if mask =="/30" and net == "192.168.1.252":
+#    print("Es una dirección de red")
+#elif mask =="/30" and net =="192.168.1.254":
+#    print("es una dirección de broadcast")
+#else:
+#    print("Es un host")
+#mask=input("Introduce la máscara de red")
+#mascara=mask.split(".")
 
-#ipred(red)
+
+    
+
+
+
+
+
