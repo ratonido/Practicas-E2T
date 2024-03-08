@@ -1,60 +1,43 @@
-"""
+
 class network():
     def __init__ (self,net,mask):
         self.net=net
         self.mask=mask
-    
-    def red_ip(self):
-        self.oct1=bin(int(net[0:3]))
-        self.oct2=bin(int(net[4:7]))
-        self.oct3=bin(int(net[8:11]))
-        self.oct4=bin(int(net[12:15]))
-        self.mask1=bin(int(mask[0:3]))
-        self.mask2=bin(int(mask[4:7]))
-        self.mask3=bin(int(mask[8:11]))
-        self.mask4=bin(int(mask[12:15]))         
+        self.octetos_red=net.split(".")
+        self.octetos_masc=mask.split(".")
+        #Octetos de la dirección Ip introducida
+        self.octr1=int(self.octetos_red[0])
+        self.octr2=int(self.octetos_red[1])
+        self.octr3=int(self.octetos_red[2])
+        self.octr4=int(self.octetos_red[3])
+        #self.octetos=[]
+        #self.octetos.insert(self.octr1,self.octr2,self.octr3,self.octr4)
+        #octetos de la máscara introducida
+        self.octm1=int(self.octetos_masc[0])
+        self.octm2=int(self.octetos_masc[1])
+        self.octm3=int(self.octetos_masc[2])
+        self.octm4=int(self.octetos_masc[3])
+        #self.msc=[]
+        #self.msc.append(self.octr1,self.octr2,self.octr3,self.octr4)
+        self.dir_red=[]
+        self.dir_broad=[]
+    def red(self):
+        for i in range(4):
+            self.dir_red.append(str(int(self.octr1[1]))) & str(int(self.octm1[1]))
+            print(self.dir_red)
+            
         
-            
-               
-            
-    
+        
+        
+        
 
-    
-  
-net=str(input("Introduce la dirección IP con octetos completos"))
-mask=str(input("Introduce la máscara de red"))
+net=input("Introduce la dirección IP""")
+mask=input("Introduce la máscara de red""")
 direccion=network(net,mask) 
-direccion.red_ip()
-"""
+direccion.red()
+
+
 
    
-net=input("Introduce la dirección de red") 
-#mask=input("introduce la máscara de red")
-
-ip_octetos=net.split(".")
-ip_red=int(ip_octetos)
-print(ip_red)
-
-    
-#dirnet=net & mask
-#dirbroad=net|~mask
-#print(dirnet)
-#print(dirbroad)
-    
-
-#if mask =="/30" and net == "192.168.1.252":
-#    print("Es una dirección de red")
-#elif mask =="/30" and net =="192.168.1.254":
-#    print("es una dirección de broadcast")
-#else:
-#    print("Es un host")
-#mask=input("Introduce la máscara de red")
-#mascara=mask.split(".")
-
-
-    
-
-
-
 
 
