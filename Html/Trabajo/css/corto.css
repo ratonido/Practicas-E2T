@@ -61,12 +61,12 @@ header {
 
 header .logo {
 	color:#fff;
-	font-size:30px;
+	font-size:50px;
 }
 
 header .logo img {
 	width:50px;
-	vertical-align: top;
+	vertical-align:top;
 }
 
 header .logo a {
@@ -109,7 +109,12 @@ header nav a:hover {
 	margin-bottom: 20px;
 	padding-bottom:20px;
 	text-align: center;
-	border-bottom:1px solid #000;*/
+	border-bottom:1px solid #000;
+}
+.imagen1{
+	width:500px;
+	
+	
 }
 
 .main article:nth-last-child(1){
@@ -122,17 +127,35 @@ header nav a:hover {
     font-size:x-large;
     font-style: bold,italic ;
     font-display: center;
+	text-align: justify;
 
-
+}	
+.h2{
+	text-align: center;
+	font-style: bold,italic;
 }
 
 
 
-}
+
 .titulo{
     font-family: 'Courier New', Courier, monospace;
     font-style:bold,italic ;
     font-size: x-large;
     text-align: justify;
 
+}
+aside {
+	background:#e67e22;
+	padding:20px;
+	flex:1 1 30%;
+	display: flex;
+	flex-wrap:wrap;
+	flex-direction:column;
+	justify-content:flex-start;
+}
+aside .widget {
+	background: #d35400;
+	height:150px;
+	margin:10px;
 }
