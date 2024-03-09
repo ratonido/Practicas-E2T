@@ -75,5 +75,6 @@ class puertas:
             
 concurso1=puertas(30)
 concurso1.gana_pierde()
+
    
     
