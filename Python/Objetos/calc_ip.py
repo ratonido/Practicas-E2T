@@ -31,16 +31,15 @@ class network():
         for j in range(4):   
             suma_broad=self.red[j] | (~self.broad[j]&255)  
             self.dir_broad.append(suma_broad) 
+        
+        self.hosts=self.dir_broad[3]-self.dir_red[3]-2
             
-            
-        print("Para la dirección de red:",self.net,"la dirección de red es:",".".join(map(str,self.dir_red)))
+        print("Para la dirección:",self.net,"la dirección de red es:",".".join(map(str,self.dir_red)))
         print("La dirección de broadcast es:",".".join(map(str,self.dir_broad)))
+        print("El número de host para esta red es:",self.hosts)   
+        
                
-            
-        
-        
-        
-        
+                 
 
 net=input("Introduce la dirección IP""")
 mask=input("Introduce la máscara de red""")
