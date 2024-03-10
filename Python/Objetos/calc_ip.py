@@ -19,9 +19,9 @@ class network():
         #self.msc.append(self.octr1,self.octr2,self.octr3,self.octr4)
         self.red=[self.octr1,self.octr2,self.octr3,self.octr4]
         self.broad=[self.octm1,self.octm2,self.octm3,self.octm4]
-        self.dir_red=[]
         
         #Calculo de la dir de red con suma binaria
+        self.dir_red=[]
         for x in range(4):
             suma_red=(self.red[x]) & (self.broad[x])
             self.dir_red.append(suma_red)
@@ -31,19 +31,24 @@ class network():
         for j in range(4):   
             suma_broad=self.red[j] | (~self.broad[j]&255)  
             self.dir_broad.append(suma_broad) 
+    
+        #Calculo del número de host para la red
         
         self.hosts=self.dir_broad[3]-self.dir_red[3]-2
             
         print("Para la dirección:",self.net,"la dirección de red es:",".".join(map(str,self.dir_red)))
         print("La dirección de broadcast es:",".".join(map(str,self.dir_broad)))
         print("El número de host para esta red es:",self.hosts)   
-        
-               
+           
+            
+            
+                   
                  
 
-net=input("Introduce la dirección IP""")
-mask=input("Introduce la máscara de red""")
+net=input("Introduce la dirección IP:")
+mask=input("Introduce la máscara de red:")
 direccion=network(net,mask) 
+
 
 
 
