@@ -1,50 +1,71 @@
 # crear una clase estudiantes y otra clase cursos y manjear ambo
 
 class alumnos:
+    listado_alumnos=[]
+    listado_nombres=[]
     
-
     def __init__(self,nombre,apellidos,dni,edad):
-        self.nombre=nombre
         self.apellido=apellidos
+        self.nombre=nombre
         self.dni=dni
         self.edad=edad 
-        self.listado=[]
         
-    
-    def agrega_alumnos(self):
-        self.listado.append(self.nombre)
-        return self.listado
+    @classmethod
+    def agrega_alumnos(cls, alumno_a_agregar):
+        cls.listado_alumnos.append(alumno_a_agregar)
         
-    def ver_alumnos(self):
-        for i in range(len(self.listado)):
-            self.nombre[i]
-        print(self.nombre)
+    @classmethod
+    def ver_alumnos(cls):
+        for x in cls.listado_alumnos:
+            print(x.nombre)
+        
                 
 class cursos:
+    lista_cursos=[]
+    asignados=[]
+    
     
     def __init__(self,nombre): 
         self.nombre_curso=nombre
-        self.lista_curso=[]
-    
-          
-    def agrega_curso(self):
-        self.lista_curso.append(self.nombre_curso)
         
+
+    
+    @classmethod     
+    def agrega_curso(cls,curso_a_agregar):
+        cls.lista_cursos.append(curso_a_agregar)
         
+    @classmethod    
+    def ver_cursos(cls):
+        for i in cls.lista_cursos:
+            print(i.nombre_curso)
+    
+    @classmethod
+    def seleccionar(cls):
+        for i in alumnos.listado_nombres:
+            for j in cursos.lista_cursos:
+                cls.       
+            
+    
+                
+            
+                
         
     
-  
-    def ver_cursos(self):
-        for i in range(len(self.lista_curso)) :
-            self.lista_curso[i]
-        print(self.lista_curso)
+    @staticmethod
+    def ver_asigandos(cls):
+        for i in cls.asignados:
+            print(i)
+            
+
+                
+
     
     
-    """ def agrega_alumnos(self):
-    self.agregado=[]
-    for i in (alumnos.listado):
-        for j in range(len(self.lista_curso)):
-                self.agregado=alumnos.listado[i:0],self."""
+    
+   
+       
+                
+    
 
 while True: 
     print("""Selecciona una de las siguientes  opciones
@@ -57,29 +78,53 @@ while True:
 7.Salir""")
     Inscripcion=int(input("Selecciona una de las opciones"))
     if Inscripcion == 7:
-        inscripcion=False
+        Inscripcion = False
         break
 
-    if Inscripcion ==1:
-        nom=input("Introduce el nombre")
-        ap=("Introduce el apellido")
-        dni=input("introduce el dni")
-        ed=input("introduce la edad")
-        estudiante=alumnos(nom,ap,dni,ed)
-        alumnos.
-    elif Inscripcion ==2:
-        curs=input("Introduce el nombre el curso")
-        curso=cursos(curs)
-        cursos.agrega_curso(curso)
+    if Inscripcion == 1:
         
-        
-        
-            
+        nom = input("Introduce el nombre")
+        ap = input("Introduce el apellido")
+        dni = input("introduce el dni")
+        ed = input("introduce la edad")
+        alumnos.agrega_alumnos(alumnos(nom,ap,dni,ed))
+       
+                
+    elif Inscripcion == 2:
+        nomb=input("Introduce el nombre del curso")
+        cursos.agrega_curso(cursos(nomb))
+                    
     elif Inscripcion == 3:
-        print(curso.ver_cursos())
+        cursos.ver_cursos()
                 
     elif Inscripcion == 4:
-        print(alumnos.ver_alumnos(estudiante))
+        alumnos.ver_alumnos()
+        
+    elif Inscripcion == 5:
+        alum=input("selecciona un alumno")
+        curs=input("selecciona un curso")
+        cursos.agregar(alumnos.listado_nombres)
+        
+    elif Inscripcion == 6:
+        cursos.asignados()
+                
+                
+    
+    
+    
+    
+      
+        
+        
+        
+        
+        
+        
+    
+  
+        
+        
+        
         
         
         
