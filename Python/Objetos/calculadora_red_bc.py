@@ -42,7 +42,7 @@ class network():
            
             
             
-                   
+                 
                  
 
 net=input("Introduce la dirección IP:")
