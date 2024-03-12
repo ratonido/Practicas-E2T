@@ -40,32 +40,16 @@ class cursos:
             print(i.nombre_curso)
     
     @classmethod
-    def seleccionar(cls):
-        for i in alumnos.listado_nombres:
-            for j in cursos.lista_cursos:
-                cls.       
-            
-    
-                
-            
-                
-        
-    
-    @staticmethod
-    def ver_asigandos(cls):
-        for i in cls.asignados:
-            print(i)
-            
-
+    def seleccionar(cls,alum,curs):
+        cls.asignados.append((alum,curs))
                 
 
-    
-    
-    
-   
-       
                 
-    
+    @classmethod
+    def ver_asignados(cls,ver):
+       print(cls.asignados[0])
+            
+
 
 while True: 
     print("""Selecciona una de las siguientes  opciones
@@ -91,7 +75,7 @@ while True:
        
                 
     elif Inscripcion == 2:
-        nomb=input("Introduce el nombre del curso")
+        nomb=input("Introduce el nombre del curso:")
         cursos.agrega_curso(cursos(nomb))
                     
     elif Inscripcion == 3:
@@ -101,12 +85,13 @@ while True:
         alumnos.ver_alumnos()
         
     elif Inscripcion == 5:
-        alum=input("selecciona un alumno")
-        curs=input("selecciona un curso")
-        cursos.agregar(alumnos.listado_nombres)
+        alum=input("selecciona un alumno:")
+        curs=input("selecciona un curso:")
+        cursos.seleccionar(alum,curs)
         
     elif Inscripcion == 6:
-        cursos.asignados()
+        seleccion=input("introduzca el nombre del curso que desea comprobar:")
+        cursos.ver_asignados(seleccion)
                 
                 
     
