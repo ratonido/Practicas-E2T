@@ -1,0 +1,18 @@
+version: '3.1'
+
+services:
+  app:
+    container_name: 'Ratonido'
+    image: httpd:latest
+    ports:
+      - 8282:80
+    
+    volumes:
+    - ./Website/Sitio:/usr/local/apache2/htdocs
+
+     
+  app2:
+    container_name: 'Ratonid1o'
+    image: httpd:latest
+    ports:
+      - 8383:80

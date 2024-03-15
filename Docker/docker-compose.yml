@@ -1,18 +1,12 @@
-version: '3.1'
-
+version: "2.2"
 services:
-  app:
-    container_name: 'Ratonido'
-    image: httpd:latest
+#UNO
+  mongo1:
+    image: mongo:4.4.18
+    restart: always
+    environment:
+      - "MONGO_INITDB_ROOT_USERNAME=root"
+      - "MONGO_INITDB_ROOT_PASSWORD=root1"
+    container_name: mongo1
     ports:
-      - 8282:80
-    
-    volumes:
-    - ./Website/Sitio:/usr/local/apache2/htdocs
-
-     
-  app2:
-    container_name: 'Ratonid1o'
-    image: httpd:latest
-    ports:
-      - 8383:80
+        - 27017:27017
