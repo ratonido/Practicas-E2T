@@ -10,3 +10,7 @@ services:
     container_name: mongo1
     ports:
         - 27017:27017
+
+    volumes:
+      - ./airbnb:/data/airbnb
+      - ./mflix:/data/mflix

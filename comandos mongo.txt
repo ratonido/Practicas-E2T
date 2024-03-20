@@ -1,0 +1,6 @@
+ restaurar una BD:mongorestore --host localhost --port 27017 --db airbnb -u root -p root1 --dir ./ --authenticationDatabase=admin
+
+Parar un contenedor: docker-compose down
+
+Actualziar una imagen: docker-compose up
+
