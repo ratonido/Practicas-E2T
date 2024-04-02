@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Generos</title>
+   
+</head>
+<body>
+   {% for x in result %}
+
+   <a href="/ver_genero/{{x['title']}}"> {{x['title']}}</a><br>
+
+    {% endfor %}
+    
+
+</body>
+</html>

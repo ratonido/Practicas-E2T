@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Generos</title>
+   
+</head>
+<body>
+    <h1>Generos</h1>
+   
+    <br>
+
+    {% for x in busqueda %}
+    
+        <a href="/ver_genero/{{x}}">{{x}}</a> <br>
+
+    {% endfor %}
+</body>
+</html>
