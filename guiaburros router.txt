@@ -1,0 +1,79 @@
+##Configuración del router
+
+enable
+configure terminal
+hostname Router1
+
+banner login $lo que te digan o quieras poner$        #El primer banner que aparecerá (Siempre empieza con un cáracter y cierra con el mismo)
+
+banner motd $lo que te digan o quieras poner$         #El banner diario
+
+                        
+
+username admin                                        #Nombre de usuario
+
+enable secret enapass                                 #Asigna contraseña enapass al modo enable y la protege para evitar que se vea cuando se hace un show run
+
+
+
+line vty 0 4                                          #Configuracion linea vty para telnet.(telnet es un modo de conexion no seguro, no confundir con acceso remoto ssh).
+password telnetpass				      #Si se quiere habilitar ssh saltarse este paso e ir a la parte de ssh. 
+login
+end o exit
+
+line con 0					      #Configuración línea de consola. Cable azul que va del RS-232 del ordenador al router
+password conpass
+login
+end o exit
+
+#Habilitar ssh modo de conexión remota segura.
+ip domain-name e2t                                    #Crear dominio y darle un nombre.
+crypto key generate rsa general-keys modulus 1024     #Creacion de las claves.Importante previamente haber asignado un hostname.
+line vty 0 4 					      #Se entra en la línea. podemos configurar hasta 15.
+transport input ssh                                   #Si se quiere  habilitar también telnet habrá que cambiar ssh por all. 				
+
+## Configuracion de interfaces
+interface fe0/0                                       #El nombre de la interfaz que queremos configurar
+ip address xxxx.xxxx.xxxx.xxxx yyyy.yyyy.yyyy.yyyy    # (x=dir de red, y=mascara)
+no shutdown                                           # !!!!!! MUY IMPORTANTE !!!!!!! Si no la interfaz NO SE ACTIVA.
+
+# Configurar dhcp 
+ip dhcp pool e2tdhcp
+network 192.168.4.0 255.255.255.0
+default-router xxxx.xxxx.xxxx.xxxx                    # Dir Ip de la boca de la red a la que vaya el router a repartir direcciones
+
+ip dhcp excluded-address xxxx.xxxx.xxxx.xxxx	      # Haremos esto por cada dir Ip que queremos excluir del DHCP.Se hace en el menú config, no dentro del DHCP.
+
+#Creacion de las subinterfaces en el caso de que haya varias VLANS 
+
+interface fe0/0.1                                     # Entrar a la primera subinterfaz
+encapsulation dot1Q				      # !! IMPORTANTE!! ya que si no no podremos darle la Ip en el siguiente comando
+ip address xxxx.xxxx.xxxx.xxxx yyyy.yyyy.yyyy.yyyy    # Dirección Ip y Máscara
+
+#Ruta estática
+
+ip route xxxx.xxxx.xxxx.xxxx yyyy.yyyy.yyyy.yyyy zzzz.zzzz.zzzz.zzzz # x= dirección !!De Red!!(no dir ip de la boca) de la que salimos. z= dirección !!De Red!! del siguiente salto, es decir el siguiente router.
+								     # Se puede hacer con interfaces pero para el examen es la manera más sencilla en caso de que haya varios routers y haya que ir de un lado a otro.
+								     # Se empieza en el primer router y se va hacia los siguientes cambiando las direcciones por las que correspondan       	
+
+
+
+
+
+
+
+
+
+
+
+
+                              
+
+
+
+
+ 
+
+
+ 
+ 
